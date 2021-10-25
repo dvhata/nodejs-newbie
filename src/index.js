@@ -24,7 +24,8 @@ app.get('/search', (req, res) => {
 })
 
 app.post('/search', (req, res) => {
-    res.render('search');
+    console.log(req.body)
+    res.send('');
 })
 
-app.listen(port,() => console.log('Example app listening on at http:/localhost:' + port));
+app.listen(port,() => console.log(`Example app listening on at http:/localhost:${port}`));
