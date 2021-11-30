@@ -10,22 +10,9 @@ app.engine('handlebars', handlebars());
 app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, '/resources/views'));
 
-app.get('/', (request, response) => {
-    response.render('home');
-})
+const route = require('./routes')
 
-app.get('/news', (req, res) => {
-    res.render('news');
-    console.log(req.query.q)
-})
+route(app);
 
-app.get('/search', (req, res) => {
-    res.render('search');
-})
+app.listen(port,() => console.log(`Example app listening at http:/localhost:${port}`));
 
-app.post('/search', (req, res) => {
-    console.log(req.body)
-    res.send('');
-})
-
-app.listen(port,() => console.log(`Example app listening on at http:/localhost:${port}`));
