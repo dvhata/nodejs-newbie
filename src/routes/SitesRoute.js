@@ -4,8 +4,8 @@ const router = express.Router();
 
 // SitesController.index
 
-router.use('/search', SitesController.search )
-router.use('/', SitesController.home) // Bao giờ cũng để / ở cuối cùng (vì nếu để / nó sẽ luôn chọc vào home)
+router.get('/search', SitesController.search )
+router.get('/', SitesController.home) // Bao giờ cũng để / ở cuối cùng (vì nếu để / nó sẽ luôn chọc vào home)
 
 
 module.exports = router;
