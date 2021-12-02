@@ -1,1 +1,13 @@
-<h1>HOME</h1>
+<h1>COURSES</h1>
+
+<div class="row">
+    {{#each courses}}
+    <div>
+        <h3>{{this.name}}</h3>
+        <p>{{this.description}}</p>
+        <img src={{this.image}} />
+        <button>Mua khoa hoc</button>
+        <a href="/courses/{{this.slug}}">Chi tiet</a>
+    </div>
+    {{/each}}
+</div>
