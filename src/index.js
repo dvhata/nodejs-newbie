@@ -2,7 +2,7 @@ const path = require('path');
 const express = require('express');
 const app = express();
 const handlebars = require('express-handlebars');
-const port = 3000; // default
+const port = 8080; // default
 
 app.use(express.static(path.join(__dirname, 'public')));
 
